@@ -8,6 +8,7 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
+        int number = 3;
         /*
          * This class should test the Game and the Die class.
          * Create a Game object, call the methods and compare their output to expected output.
