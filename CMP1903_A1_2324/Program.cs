@@ -10,10 +10,12 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
+            Testing test1 = new Testing();
+            Console.WriteLine(test1.testingDie());
+
             Game franksGame = new Game();
             franksGame.Roller();
             Console.ReadLine();
-
             /*
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.

@@ -8,7 +8,7 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-        public bool test() {
+        public bool testingDie() { // called within the program.cs returning a true or false indicating if the Die works well or not
             bool worksWell = true;
             int checkVar = 0;
             List<int> testList = new List<int>() { 0,0,0,0,0,0 };
