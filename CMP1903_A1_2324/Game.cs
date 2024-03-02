@@ -11,8 +11,13 @@ namespace CMP1903_A1_2324
        public int Roller()
         {
             Die die1 = new Die();
+            Die die2 = new Die();
+            Die die3 = new Die();
             int firstRoll = die1.roll();
-            Console.WriteLine("Rolled {0}", firstRoll);
+            int secondRoll = die2.roll();
+            int thirdRoll = die3.roll();
+
+            Console.WriteLine("Rolled {0},{1},{2}", firstRoll,secondRoll,thirdRoll);
             return firstRoll;
             
         }
