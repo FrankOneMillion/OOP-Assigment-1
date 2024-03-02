@@ -8,7 +8,24 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-        int number = 3;
+        public bool test() {
+            bool worksWell = true;
+            int checkVar = 0;
+            List<int> testList = new List<int>() { 0,0,0,0,0,0 };
+            while (checkVar != 21) {
+                Die testDie = new Die();
+                int testRoll = testDie.roll();
+                if (testRoll < 7) {
+                    testList[testRoll - 1] = testRoll; // adds the value to the list until list has 1,2,3,4,5,6
+                }
+                else
+                {
+                    worksWell = false;
+                }
+                checkVar = testList.Sum();
+            }
+            return worksWell;
+        }
 
         /*
          * This class should test the Game and the Die class.

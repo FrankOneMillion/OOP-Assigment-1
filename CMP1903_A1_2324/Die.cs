@@ -11,7 +11,7 @@ namespace CMP1903_A1_2324
         static Random random = new Random(); //importing use of random into project
         public int roll()
         {
-            int rollValue = random.Next(1, 7);
+            int rollValue = random.Next(1, 7); // generates a value from 1 but below 7 (1->6)
             return rollValue;
         }
         /*
