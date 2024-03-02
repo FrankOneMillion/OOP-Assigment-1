@@ -9,7 +9,8 @@ namespace CMP1903_A1_2324
     internal class Die
     {
         static Random random = new Random(); //importing use of random into project
-        public int roll() {
+        public int roll()
+        {
             int rollValue = random.Next(1, 7);
             return rollValue;
         }

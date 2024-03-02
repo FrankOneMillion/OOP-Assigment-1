@@ -8,6 +8,15 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
+       public int Roller()
+        {
+            Die die1 = new Die();
+            int firstRoll = die1.roll();
+            Console.WriteLine("Rolled {0}", firstRoll);
+            return firstRoll;
+            
+        }
+        
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
          *
