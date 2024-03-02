@@ -13,18 +13,18 @@ namespace CMP1903_A1_2324
             int checkVar = 0;
             List<int> testList = new List<int>() { 0,0,0,0,0,0 };
             while (checkVar != 21) {
-                Die testDie = new Die();
+                Die testDie = new Die(); // creating die to test
                 int testRoll = testDie.roll();
                 if (testRoll < 7) {
                     testList[testRoll - 1] = testRoll; // adds the value to the list until list has 1,2,3,4,5,6
                 }
                 else
                 {
-                    worksWell = false;
+                    worksWell = false; // if a value is generated above 6
                 }
-                checkVar = testList.Sum();
+                checkVar = testList.Sum(); // if the sum is 21 the loop ends
             }
-            return worksWell;
+            return worksWell; // returns bool value
         }
 
         /*
