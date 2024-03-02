@@ -26,7 +26,18 @@ namespace CMP1903_A1_2324
             }
             return worksWell; // returns bool value
         }
-
+        public bool testingGame()
+        {
+            bool worksWell = true;
+            Game testGame = new Game();
+            int testSum = testGame.Roller();
+            float averageValue = (testSum / 3);
+            if (averageValue > 6)
+            {
+                worksWell = false;
+            }
+            return worksWell;
+        }
         /*
          * This class should test the Game and the Die class.
          * Create a Game object, call the methods and compare their output to expected output.

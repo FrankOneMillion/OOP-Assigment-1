@@ -11,7 +11,8 @@ namespace CMP1903_A1_2324
         static void Main(string[] args)
         {
             Testing test1 = new Testing();
-            Console.WriteLine(test1.testingDie());
+            Console.WriteLine(test1.testingDie());  // returns true if die working correctly
+            Console.WriteLine(test1.testingGame()); // returns true if sum returned correctly and is not above 18
 
             Game franksGame = new Game();
             franksGame.Roller();
