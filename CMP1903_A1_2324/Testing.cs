@@ -29,14 +29,17 @@ namespace CMP1903_A1_2324
         public bool testingGame()
         {
             bool worksWell = true;
-            Game testGame = new Game();
+            Game testGame = new Game(); // creating new game
             int testSum = testGame.Roller();
             float averageValue = (testSum / 3);
-            if (averageValue > 6)
+            if (testSum > 18) { // if sum of 3 die rolls above 18 works well is false
+                worksWell = false;
+            }
+            if (averageValue > 6) // if average die value is above 6 sets works well to false
             {
                 worksWell = false;
             }
-            return worksWell;
+            return worksWell; // returns bool value
         }
         /*
          * This class should test the Game and the Die class.
