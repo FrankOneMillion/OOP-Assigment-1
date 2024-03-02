@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,15 +11,16 @@ namespace CMP1903_A1_2324
     {
        public int Roller()
         {
+            int sum = 0;
             Die die1 = new Die();
             Die die2 = new Die();
             Die die3 = new Die();
             int firstRoll = die1.roll();
             int secondRoll = die2.roll();
             int thirdRoll = die3.roll();
-
+            sum = (firstRoll + secondRoll + thirdRoll);
             Console.WriteLine("Rolled {0},{1},{2}", firstRoll,secondRoll,thirdRoll);
-            return firstRoll;
+            return sum;
             
         }
         
