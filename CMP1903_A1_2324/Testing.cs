@@ -27,23 +27,17 @@ namespace CMP1903_A1_2324
             }
             return worksWell; // returns bool value
         }
-        public bool testingGame()
-        {
+        public bool testingGame(){
             bool worksWell = true;
             Game testGame = new Game(); // creating new game
             int testSum = testGame.Roller();
-            float averageValue = (testSum / 3);
-            if (testSum > 18) { // if sum of 3 die rolls above 18 works well is false
-                worksWell = false;
-            }
-            if (testSum < 3) { 
-                worksWell = false;
-            }
-            if (averageValue > 6) // if average die value is above 6 sets works well to false
-            {
-                worksWell = false;
-            }
+            float averageValue = testSum / 3;
+
+            Debug.Assert((testSum > 18), "Sum of die values too large (above 18)");// if sum of 3 die rolls above 18 
+            Debug.Assert((testSum < 3), "Sum of die values too small (below 3)");// if sum of 3 die rolls below 3
+            Debug.Assert((averageValue < 6), "average die value (from sum) is too large (above 6)");// if average die value is above 6
             Debug.Assert(worksWell, "dosnt work well");
+
             return worksWell; // returns bool value
         }
         /*
