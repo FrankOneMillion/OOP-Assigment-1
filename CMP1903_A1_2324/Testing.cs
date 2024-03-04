@@ -12,6 +12,9 @@ namespace CMP1903_A1_2324
         public bool testingDie() { // called within the program.cs returning a true or false indicating if the Die works well or not
             bool worksWell = true;
             int checkVar = 0;
+
+            /*  // Old code used to try and roll 1,2,3,4,5 and 6 from a die
+            
             List<int> testList = new List<int>() { 0,0,0,0,0,0 };
             while (checkVar != 21) {
                 Die testDie = new Die(); // creating die to test
@@ -25,6 +28,12 @@ namespace CMP1903_A1_2324
                 }
                 checkVar = testList.Sum(); // if the sum is 21 the loop ends
             }
+            */
+
+            Die testDie = new Die(); // creating die to test
+            int testRoll = testDie.roll();
+            Debug.Assert((testRoll < 7 && testRoll > 0), "a Die rolled outisde expected range"); // checking a die roll is between 1 and 6
+
             return worksWell; // returns bool value
         }
         public bool testingGame(){
