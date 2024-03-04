@@ -9,12 +9,14 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-       public int Roller()
+       public List<int> Roller()
         {
             int sum = 0;
+            List<int> returnList = new List<int>();
             string answer = "yes";
             while (answer != "no")
             {
+
                 Die die1 = new Die();
                 Die die2 = new Die();
                 Die die3 = new Die();
@@ -27,7 +29,8 @@ namespace CMP1903_A1_2324
                 int high = 0; // set to value lower than possible roll on a die
                 int low = 10; // set to a higher value than die can roll to ensure that any possible rolled value by the die is smaller
                 List<int> listOfDie = new List<int>() { firstRoll, secondRoll, thirdRoll };
-
+                returnList=listOfDie;
+                returnList.Add(sum);
                 for (int i = 0; i < 3; i++)
                 { // the loop goes through each value in list of die (3 values)
                     if (high < listOfDie[i])
@@ -44,7 +47,7 @@ namespace CMP1903_A1_2324
                 Console.WriteLine("sum:{0} average:{1} lowest:{2} highest:{3} range:{4} do you wish to continue rolling? yes/no :", sum, averageRoll, low, high, range); // returning statistics to user
                 answer = Console.ReadLine(); // gathers answer from user
             }
-            return sum; //returns sum to test
+            return returnList; //returns the values of the 3 die and sum
         }
         
         /*
