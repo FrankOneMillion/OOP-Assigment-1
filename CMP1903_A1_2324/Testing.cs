@@ -46,12 +46,10 @@ namespace CMP1903_A1_2324
             Debug.Assert((returnList[3] < 18), "Sum of die values too large (above 18)");// if sum of 3 die rolls above 18 
             Debug.Assert((returnList[3] > 3), "Sum of die values too small (below 3)");// if sum of 3 die rolls below 3
             Debug.Assert((averageValue < 6), "average die value (from sum) is too large (above 6)");// if average die value is above 6
-            int incrementalVar = 0;
-            while (incrementalVar != 3) { // loop to go through each die
-                Debug.Assert(((returnList[incrementalVar] < 7 && returnList[incrementalVar] > 0)), "a Die rolled outisde expected range");
-                incrementalVar++;
+            for (int i = 0; i <= 2; i++) // reworked into a for loop
+            {
+                Debug.Assert(((returnList[i] < 7 && returnList[i] > 0)), "a Die rolled outisde expected range");
             }
-            Debug.Assert((returnList[0] < 7 && returnList[0] > 0), "a Die rolled outisde expected range");
             Debug.Assert(worksWell, "dosnt work well");
 
             return worksWell; // returns bool value
