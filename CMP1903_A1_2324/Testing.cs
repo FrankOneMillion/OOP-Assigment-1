@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,10 +36,14 @@ namespace CMP1903_A1_2324
             if (testSum > 18) { // if sum of 3 die rolls above 18 works well is false
                 worksWell = false;
             }
+            if (testSum < 3) { 
+                worksWell = false;
+            }
             if (averageValue > 6) // if average die value is above 6 sets works well to false
             {
                 worksWell = false;
             }
+            Debug.Assert(worksWell, "dosnt work well");
             return worksWell; // returns bool value
         }
         /*
