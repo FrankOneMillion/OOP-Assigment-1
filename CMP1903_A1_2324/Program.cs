@@ -14,14 +14,10 @@ namespace CMP1903_A1_2324
             // Console.WriteLine(test1.testingDie());  // returns true if die working correctly // no longer needed as die tested in game testing
             test1.testingGame(); // runs the method wich tests multiple elements for the game class
 
-            //Game franksGame = new Game();
-            //franksGame.Roller(); // removed this code to allow user to leave program when typing 'no' once
+            //Game franksGame = new Game(); // Game object no longer needed as testing class with the method testingGame creates its own game object to run
 
+            //franksGame.Roller(); // removed this code to allow user to leave program when typing 'no' once
             // Console.ReadLine(); was used before the main loop within game.cs was implemented 
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
         }
     }
 }
