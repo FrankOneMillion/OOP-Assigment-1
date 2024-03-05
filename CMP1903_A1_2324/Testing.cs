@@ -24,7 +24,15 @@ namespace CMP1903_A1_2324
             for (int i = 0; i <= 2; i++) // reworked into a for loop
             {
                 Debug.Assert(((returnList[i] < 7 && returnList[i] > 0)), "a Die rolled outisde expected range"); // checks the 3 returned die, produces error if not between 1 and 6
-            }   
+            }
+            Console.WriteLine("Testing game class and methods complete");
+        }
+        public void TestingDie()
+        {
+            Die testDie = new Die(); // creating new die object
+            int testRoll=testDie.Roll();
+            Debug.Assert((7 > testRoll && testRoll > 0), "die rolled outside of expected range (1-6)"); // checking the die rolled within this class is above 0 and below 7
+            Console.WriteLine("Testing die class and methods complete");
         }
     }
 }
