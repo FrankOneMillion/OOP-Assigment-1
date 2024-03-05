@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace CMP1903_A1_2324
         {
             int sum = 0;
             List<int> returnList = new List<int>();
+            List<string> possibleAnswers = new List<string>() { "yes","no" };
             string answer = "yes";
             while (answer != "no")
             {
@@ -46,6 +48,7 @@ namespace CMP1903_A1_2324
                 Console.WriteLine("Rolled {0},{1},{2}", firstRoll, secondRoll, thirdRoll);
                 Console.WriteLine("sum:{0} average:{1} lowest:{2} highest:{3} range:{4} do you wish to continue rolling? yes/no :", sum, averageRoll, low, high, range); // returning statistics to user
                 answer = Console.ReadLine(); // gathers answer from user
+                Debug.Assert((possibleAnswers.Contains(answer)), "yes or no where not stated"); // returns error if an expected answer is not given, however will still run until 'no' is entered to prevent further errors
             }
             return returnList; //returns the values of the 3 die and sum
         }
