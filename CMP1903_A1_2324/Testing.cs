@@ -9,7 +9,7 @@ namespace CMP1903_A1_2324
 {
     internal class Testing { // testing the game and die class
         
-        public void testingGame(){ //changed to void as no longer needed to pass value
+        public void TestingGame(){ //changed to void as no longer needed to pass value
             Game testGame = new Game(); // creating new game object
             // die objects created within this new game object and tested through their returned values 
             List<int> returnList = new List<int>(); // creating a list to hold returned values from game()

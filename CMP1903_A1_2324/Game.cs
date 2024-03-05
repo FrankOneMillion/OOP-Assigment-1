@@ -22,9 +22,9 @@ namespace CMP1903_A1_2324
                 Die die1 = new Die(); // creating new die objects
                 Die die2 = new Die();
                 Die die3 = new Die();
-                int firstRoll = die1.roll(); // calling the objects to run their roll method which return an int value
-                int secondRoll = die2.roll();
-                int thirdRoll = die3.roll();
+                int firstRoll = die1.Roll(); // calling the objects to run their roll method which return an int value
+                int secondRoll = die2.Roll();
+                int thirdRoll = die3.Roll();
                 sum = (firstRoll + secondRoll + thirdRoll); // creating a sum of the three returned int values for each dies face value
                 float sumAsFloat = sum;
                 float averageRoll = (sumAsFloat / 3);
