@@ -13,19 +13,19 @@ namespace CMP1903_A1_2324
        public List<int> Roller()
         {
             int sum = 0;
-            List<int> returnList = new List<int>();
-            List<string> possibleAnswers = new List<string>() { "yes","no" };
+            List<int> returnList = new List<int>(); // a list created which holds the values that will be returned from this method
+            List<string> possibleAnswers = new List<string>() { "yes","no" }; // holds values of the two expected answers from the user when asked if they wish to continue
             string answer = "yes";
-            while (answer != "no")
+            while (answer != "no") // loops until user enters "no" after being asked if they wish to roll again
             {
 
-                Die die1 = new Die();
+                Die die1 = new Die(); // creating new die objects
                 Die die2 = new Die();
                 Die die3 = new Die();
-                int firstRoll = die1.roll();
+                int firstRoll = die1.roll(); // calling the objects to run their roll method which return an int value
                 int secondRoll = die2.roll();
                 int thirdRoll = die3.roll();
-                sum = (firstRoll + secondRoll + thirdRoll);
+                sum = (firstRoll + secondRoll + thirdRoll); // creating a sum of the three returned int values for each dies face value
                 float sumAsFloat = sum;
                 float averageRoll = (sumAsFloat / 3);
                 int high = 0; // set to value lower than possible roll on a die
@@ -34,7 +34,7 @@ namespace CMP1903_A1_2324
                 returnList=listOfDie;
                 returnList.Add(sum);
                 for (int i = 0; i < 3; i++)
-                { // the loop goes through each value in list of die (3 values)
+                { // the loop goes through each value in list of die (3 values) to find the lowest and highest int value
                     if (high < listOfDie[i])
                     {
                         high = listOfDie[i];
@@ -52,15 +52,6 @@ namespace CMP1903_A1_2324
             }
             return returnList; //returns the values of the 3 die and sum
         }
-        
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
-
-        //Methods
 
     }
 }
