@@ -12,7 +12,7 @@ namespace CMP1903_A1_2324
         {
             Testing test1 = new Testing(); // creating a testing object
             // Console.WriteLine(test1.testingDie());  // returns true if die working correctly // no longer needed as die tested in game testing
-            Console.WriteLine(test1.testingGame()); // returns true if sum returned correctly and is not above 18
+            test1.testingGame(); // runs the method wich tests multiple elements for the game class
 
             //Game franksGame = new Game();
             //franksGame.Roller(); // removed this code to allow user to leave program when typing 'no' once

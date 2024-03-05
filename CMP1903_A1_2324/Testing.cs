@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
-    internal class Testing
-    {
+    internal class Testing { 
         
-        public bool testingGame(){
+        public void testingGame(){ //changed to void as no longer needed to pass value
             bool worksWell = true;
             Game testGame = new Game(); // creating new game
             List<int> returnList = new List<int>(); // creating a list to hold returned values from game()
@@ -26,7 +25,6 @@ namespace CMP1903_A1_2324
             }   
             Debug.Assert(worksWell, "dosnt work well");
 
-            return worksWell; // returns bool value
         }
         /*
          * This class should test the Game and the Die class.
