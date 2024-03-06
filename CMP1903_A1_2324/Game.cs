@@ -9,8 +9,11 @@ using System.Threading.Tasks;
 namespace CMP1903_A1_2324
 {
     internal class Game
-    {
-       public List<int> Roller()
+    {/// <summary>
+     /// the mthod Roller creates die objects, rolls them and returns them to the user in addition to added statistics
+     /// </summary>
+     /// <returns> returns the values of the 3 die and sum </returns>
+        public List<int> Roller()
         {
             int sum = 0;
             List<int> returnList = new List<int>(); // a list created which holds the values that will be returned from this method
