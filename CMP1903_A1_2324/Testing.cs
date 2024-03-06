@@ -9,13 +9,10 @@ namespace CMP1903_A1_2324
 {
     internal class Testing { // testing the game and die class
         
-        /// <summary>
-        /// this method TestingGame tests the Game class and that its returned values such as the sum are calculated correctly and within expected logical range
-        /// </summary>
         public void TestingGame(){ //changed to void as no longer needed to pass value
             int numberOfRolls = 3;
             Game testGame = new Game(); // creating new game object
-            // die objects created within this new game object and tested through their returned values 
+            // die objects also created within this new game object and tested through their returned values 
             List<int> returnList = new List<int>(); // creating a list to hold returned values from game()
             returnList = testGame.Roller(numberOfRolls); // calling method
             float averageValue = returnList[numberOfRolls] / numberOfRolls;
