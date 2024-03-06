@@ -8,7 +8,8 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        static Random random = new Random(); //importing use of random into project
+        static Random random = new Random(); // Instantiating a new random object
+
         /// <summary>
         ///  this method Roll is used to generate a random value from 1 to 6
         /// </summary>
