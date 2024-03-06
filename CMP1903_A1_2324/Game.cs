@@ -21,19 +21,20 @@ namespace CMP1903_A1_2324
             string answer = "yes";
             while (answer != "no") // loops until user enters "no" after being asked if they wish to roll again
             {
+                sum = 0;
+                List<int> listOfDie = new List<int>();
+                for (int i = 0; i < 3; i++) // loops 3 times to create 3 die objects
+                {
+                    Die loopedDie = new Die(); // creating new die object
+                    int loopedDieRoll = loopedDie.Roll();
+                    listOfDie.Add(loopedDieRoll);
+                    sum += loopedDieRoll; // using the roll method within the die object and adding the returned int value to the sum
+                }
 
-                Die die1 = new Die(); // creating new die objects
-                Die die2 = new Die();
-                Die die3 = new Die();
-                int firstRoll = die1.Roll(); // calling the objects to run their roll method which return an int value
-                int secondRoll = die2.Roll();
-                int thirdRoll = die3.Roll();
-                sum = (firstRoll + secondRoll + thirdRoll); // creating a sum of the three returned int values for each dies face value
                 float sumAsFloat = sum;
                 float averageRoll = (sumAsFloat / 3);
                 int high = 0; // set to value lower than possible roll on a die
                 int low = 10; // set to a higher value than die can roll to ensure that any possible rolled value by the die is smaller
-                List<int> listOfDie = new List<int>() { firstRoll, secondRoll, thirdRoll };
                 returnList=listOfDie;
                 returnList.Add(sum);
                 for (int i = 0; i < 3; i++)
@@ -48,7 +49,7 @@ namespace CMP1903_A1_2324
                     }
                 }
                 int range = (high - low);
-                Console.WriteLine("Rolled {0},{1},{2}", firstRoll, secondRoll, thirdRoll);
+                Console.WriteLine("Rolled {0},{1},{2}", listOfDie[0], listOfDie[1], listOfDie[2]);
                 Console.WriteLine("sum:{0} average:{1} lowest:{2} highest:{3} range:{4} do you wish to continue rolling? yes/no :", sum, averageRoll, low, high, range); // returning statistics to user
                 answer = Console.ReadLine(); // gathers answer from user
                 Debug.Assert((possibleAnswers.Contains(answer)), "yes or no where not stated"); // returns error if an expected answer is not given, however will still run until 'no' is entered to prevent further errors
